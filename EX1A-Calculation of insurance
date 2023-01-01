@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int age;
+float d,a,f;
+char ge,sm;
+clrscr();
+printf("Enter age\n");
+scanf("%d",&age);
+fflush(stdin);
+printf("Enter 'm'for male and 'f' for female\n");
+scanf("%c",&ge);
+fflush(stdin);
+printf("Enter 'y'if you are smoker\n");
+scanf("%c",&sm);
+if(age>=20&&age<=30)
+a=10000;
+else if(age<=40)
+a=15000;
+else if(age<=50)
+a=20000;
+else if(age<=60)
+a=40000;
+else
+printf("No Discount policy for your age group");
+if(ge=='f')
+{
+d=a/10;
+a-=d;
+}
+if(sm=='y')
+{
+f=a/10;
+a+=f;
+}
+printf("Amount=%f",a);
+getch();
+}
